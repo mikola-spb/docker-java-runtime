@@ -23,10 +23,12 @@ RUN \
     rm -f /usr/lib/jvm/jre/lib/javaws.jar && \
     rm -f /usr/lib/jvm/jre/lib/deploy.jar && \
     rm -f /usr/lib/jvm/jre/lib/plugin.jar && \
-    update-alternatives --install /usr/bin/ControlPanel ControlPanel /usr/lib/jvm/jre/bin/ControlPanel" 1 && \
-    update-alternatives --install /usr/bin/java         java         /usr/lib/jvm/jre/bin/java" 1 && \
-    update-alternatives --install /usr/bin/jcontrol     jcontrol     /usr/lib/jvm/jre/bin/jcontrol" 1 && \
-    update-alternatives --install /usr/bin/jjs          jjs          /usr/lib/jvm/jre/bin/jjs" 1 && \
-    update-alternatives --install /usr/bin/keytool      keytool      /usr/lib/jvm/jre/bin/keytool" 1 && \
-    update-alternatives --install /usr/bin/pack200      pack200      /usr/lib/jvm/jre/bin/pack200" 1 && \
-    update-alternatives --install /usr/bin/unpack200    unpack200    /usr/lib/jvm/jre/bin/unpack200" 1 
+    apt-get -y remove curl && \
+    apt-get -y autoremove && \
+    update-alternatives --install /usr/bin/ControlPanel ControlPanel /usr/lib/jvm/jre/bin/ControlPanel 1 && \
+    update-alternatives --install /usr/bin/java         java         /usr/lib/jvm/jre/bin/java 1 && \
+    update-alternatives --install /usr/bin/jcontrol     jcontrol     /usr/lib/jvm/jre/bin/jcontrol 1 && \
+    update-alternatives --install /usr/bin/jjs          jjs          /usr/lib/jvm/jre/bin/jjs 1 && \
+    update-alternatives --install /usr/bin/keytool      keytool      /usr/lib/jvm/jre/bin/keytool 1 && \
+    update-alternatives --install /usr/bin/pack200      pack200      /usr/lib/jvm/jre/bin/pack200 1 && \
+    update-alternatives --install /usr/bin/unpack200    unpack200    /usr/lib/jvm/jre/bin/unpack200 1 
