@@ -26,7 +26,7 @@ RUN \
     update-alternatives --install /usr/bin/jjs          jjs          /usr/lib/jvm/jre/bin/jjs 1 && \
     update-alternatives --install /usr/bin/keytool      keytool      /usr/lib/jvm/jre/bin/keytool 1 && \
     update-alternatives --install /usr/bin/pack200      pack200      /usr/lib/jvm/jre/bin/pack200 1 && \
-    update-alternatives --install /usr/bin/unpack200    unpack200    /usr/lib/jvm/jre/bin/unpack200 1
+    update-alternatives --install /usr/bin/unpack200    unpack200    /usr/lib/jvm/jre/bin/unpack200 1 && \
     
     # Cleanup
     rm -fr /tmp/* && \
@@ -45,4 +45,4 @@ RUN \
     rm -f /usr/lib/jvm/jre/lib/deploy.jar && \
     rm -f /usr/lib/jvm/jre/lib/plugin.jar && \
     apt-get -y remove curl unzip && \
-    apt-get -y autoremove && \
+    apt-get -y autoremove 
