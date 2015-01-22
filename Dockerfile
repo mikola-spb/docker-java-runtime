@@ -7,7 +7,7 @@ RUN \
     apt-get install -y curl && \
     curl -SL http://javadl.sun.com/webapps/download/AutoDL?BundleId=101400 -o /tmp/oracle-jre.tar.gz && \
     mkdir -p /usr/lib/jvm/jre/ && \
-    tar -xzf /tmp/oracle-jre.tar.gz -C /usr/lib/jvm/jre/ --strip-components=1 
+    tar -xzf /tmp/oracle-jre.tar.gz -C /usr/lib/jvm/jre/ --strip-components=1 && \
     rm -f /tmp/oracle-jre.tar.gz && \
     rm -f /usr/lib/jvm/jre/bin/javaws && \
     rm -f /usr/lib/jvm/jre/bin/orbd && \
